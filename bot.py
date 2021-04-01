@@ -36,7 +36,14 @@ async def 핑(ctx):
 
 @client.command()
 async def 도움(ctx):
-    await ctx.send('안녕하세요')
+    embed=discord.Embed(title="추가적인 정보는 클릭해서 확인", url="https://lavi27.github.io/lavbot-website/cmd.html", color=0x6f6fff)
+    embed.set_author(name="랍봇 도움", icon_url="https://i.imgur.com/6LE8eOw.png")
+    embed.add_field(name="~검열제외", value=" 검열 할 단어중 원하는 단어를 제외", inline=False)
+    embed.add_field(name="~검열목록", value=" 검열 할 단어 목록(DM전송)", inline=False)
+    embed.add_field(name="~핑", value="ping 상태", inline=False)
+    embed.add_field(name="~도움", value="도움", inline=False)
+    embed.add_field(name="~서버정보", value="서버 정보", inline=False)
+    await ctx.send(embed=embed)
 
 @client.command()
 async def 서버정보(ctx):
