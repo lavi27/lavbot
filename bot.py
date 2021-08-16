@@ -60,6 +60,13 @@ async def 추방(ctx):
     await ctx.send('안녕하세요')
 
 @bot.command()
+async def create(ctx, channel_name):
+    guild = ctx.message.guild
+    await guild.create_text_channel(channel_name)
+    await ctx.send(channel_name)
+    print('A')
+
+@bot.command()
 async def 밴(ctx):
     await ctx.send('안녕하세요')
 
